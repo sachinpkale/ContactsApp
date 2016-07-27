@@ -1,4 +1,4 @@
-# ContactsApp
+# Contacts Application
 
 #### Synopsis
 A simple contacts application supporting `add contact` and `search contact` functions. Search is prefix-based. Using prefix tree ([trie](https://en.wikipedia.org/wiki/Trie)) to store the contacts.

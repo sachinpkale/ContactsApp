@@ -4,8 +4,10 @@
 A simple contacts application supporting `add contact` and `search contact` functions. Search is prefix-based. Using prefix tree ([trie](https://en.wikipedia.org/wiki/Trie)) to store the contacts.
 
 #### Running App and Tests
-1. To run the app: **python -m src.contacts**
-2. To run the tests: **make test**
+1. To run the app: 
+    `python -m src.contacts`
+2. To run the tests: 
+    `make test`
 
 #### Example
 ```

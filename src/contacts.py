@@ -1,3 +1,7 @@
+"""ContactsApp supports two functions:
+1. add_contact
+2. search_contact (prefix based search)
+"""
 from src.contacts_app import ContactsApp
 
 if __name__ == "__main__":

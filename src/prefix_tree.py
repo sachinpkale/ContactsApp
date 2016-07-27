@@ -1,8 +1,14 @@
+"""A disctionary based prefix tree implementation"""
 class PrefixTree:
     def __init__(self):
         self.trie = dict()
 
     def add(self, key, value):
+        """Add key, value to prefix tree
+
+        :param key:
+        :param value:
+        """
         trie = self.trie
         if not key:
             return
@@ -18,6 +24,11 @@ class PrefixTree:
             trie = trie[s]
 
     def search(self, key):
+        """Search prefix tree for a given key
+
+        :param key: Key to be searched for
+        :return list of values matching given key as prefix
+        """
         trie = self.trie
         for s in key:
             if s not in trie:
@@ -26,6 +37,11 @@ class PrefixTree:
         return self.__get_values__(trie)
 
     def __get_values__(self, root):
+        """Get all values recursively from a subtree rooted at root
+
+        :param root: Node in prefix tree
+        :return List of values
+        """
         values = []
         values += root.get('values', [])
         for child in root:

@@ -23,12 +23,5 @@ class ContactsAppTestCase(unittest.TestCase):
 		self.assertEquals(contacts_app.__create_contact__(' Abc   Xyz  ').get_name(), 'Abc Xyz')
 		self.assertEquals(contacts_app.__create_contact__('Abc  P  Xyz').get_name(), 'Abc P  Xyz')
 
-    def test_add_contact(self):
-		contacts_app = ContactsApp()
-		contacts_app.add_contact('Abc Xyz')
-		contacts_app.add_contact('Abc')
-
-		print contacts_app
-
 if __name__ == '__main__':
     unittest.main()

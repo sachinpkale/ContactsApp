@@ -1,4 +1,4 @@
-"""A disctionary based prefix tree implementation"""
+"""A dictionary based prefix tree implementation"""
 class PrefixTree:
     def __init__(self):
         self.trie = dict()

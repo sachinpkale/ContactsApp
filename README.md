@@ -4,6 +4,7 @@
 - A simple contacts application supporting `add contact` and `search contact` functions. 
 - Search is prefix-based and case in-sensitive. 
 - Using prefix tree ([trie](https://en.wikipedia.org/wiki/Trie)) to store the contacts.
+- As data is being stored in in-memory data structure, it will not be available in subsequent runs of the application.
 
 #### Running App and Tests
 1. To run the app: 

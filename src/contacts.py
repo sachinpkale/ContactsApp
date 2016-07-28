@@ -1,6 +1,10 @@
 """ContactsApp supports two functions:
 1. add_contact
-2. search_contact (prefix based search)
+2. search_contact
+
+Assumptions:
+1. Only prefix based search is supported.
+2. As data is being stored in in-memory data structure, it will not be available in subsequent runs of the application.
 """
 from src.contacts_app import ContactsApp
 

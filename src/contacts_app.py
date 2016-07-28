@@ -32,7 +32,7 @@ class ContactsApp:
             self.last_name_contacts.add(contact.last_name.lower(), contact)
 
     def search_contact(self, contact):
-        """Search contact from both the prefix trees. Duplicates will be removed
+        """Search contact from both the prefix trees. Duplicates will be removed.
 
         :param contact: contact name to be searched
         :return list of contacts matching prefix

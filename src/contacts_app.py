@@ -40,8 +40,8 @@ class ContactsApp:
         contact = contact.strip()
         contacts = []
         contacts += self.first_name_contacts.search(contact.lower())
-        last_contacts = self.last_name_contacts.search(contact.lower())
-        contacts += [c for c in last_contacts if c not in contacts]
+        contacts += self.last_name_contacts.search(contact.lower())
+        contacts = set(contacts)
         contacts = [c.get_name() for c in contacts]
         return sorted(contacts, key=len)
 

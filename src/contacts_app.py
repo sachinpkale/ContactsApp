@@ -18,8 +18,7 @@ class Contact:
 """
 class ContactsApp:
     def __init__(self):
-        self.first_name_contacts = PrefixTree()
-        self.last_name_contacts = PrefixTree()
+        self.contacts = PrefixTree()
 
     def add_contact(self, contact):
         """Add contact to both the prefix trees
@@ -28,8 +27,8 @@ class ContactsApp:
         """
         contact = self.__create_contact__(contact)
         if contact:
-            self.first_name_contacts.add(contact.get_name().lower(), contact)
-            self.last_name_contacts.add(contact.last_name.lower(), contact)
+            self.contacts.add(contact.get_name().lower(), contact)
+            self.contacts.add(contact.last_name.lower(), contact)
 
     def search_contact(self, contact):
         """Search contact from both the prefix trees. Duplicates will be removed.
@@ -39,8 +38,7 @@ class ContactsApp:
         """
         contact = contact.strip()
         contacts = []
-        contacts += self.first_name_contacts.search(contact.lower())
-        contacts += self.last_name_contacts.search(contact.lower())
+        contacts = self.contacts.search(contact.lower())
         contacts = set(contacts)
         contacts = [c.get_name() for c in contacts]
         return sorted(contacts, key=len)
